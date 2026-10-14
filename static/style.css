@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+nav {
+    background: #eeeeee;
+    padding: 10px;
+}
+footer {
+    margin-top: 3rem;
+    color: #666666;
+}
