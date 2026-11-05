@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>留言簿</h2>
+
+<!-- 显示审核通过的留言 -->
+{% for entry in entries %}
+    <div>
+        <strong>{{ entry.name }}</strong> ({{ entry.email }})
+        <p>{{ entry.content }}</p >
+    </div>
+    <hr>
+{% endfor %}
+
+<!-- 提交新留言的表单 -->
+<h3>添加新评论</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">提交</button>
+</form>
+{% endblock %}
