@@ -1,10 +1,9 @@
-from django.shortcuts import render
+from django.urls import path
+from . import views
 
-def index(request):
-    return render(request, 'blog/index.html')
-
-def about(request):
-    return render(request, 'blog/about.html')
-
-def article(request):
-    return render(request, 'blog/article.html')
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('article/', views.article, name='article'),
+    path('guestbook/', views.guestbook, name='guestbook'),
+]
